@@ -111,8 +111,8 @@ def newCatalog():
     Este indice crea un map cuya llave es el año de publicacion
     """
     catalog['years'] = mp.newMap(40,
-                                 maptype='PROBING',
-                                 loadfactor=0.5,
+                                 maptype='CHAINING',
+                                 loadfactor=6.0,
                                  comparefunction=compareMapYear)
 
     return catalog
